@@ -13,7 +13,7 @@ export function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 glass-dark border-b border-white/10 h-16 sm:h-20 transition-all duration-300">
       <div className="container mx-auto px-4 h-full flex items-center justify-between">
         <div className="text-xl sm:text-2xl font-display font-bold tracking-widest text-primary">
-          COCKELITO
+          COCKTELITO
         </div>
 
         <div className="flex items-center gap-4 sm:gap-8">

@@ -7,7 +7,7 @@ import machineImage from "@assets/generated_images/sleek_rose_gold_and_anthracit
 const products = [
   {
     id: "machine-preorder",
-    name: "Machine COCKELITO - Précommande",
+    name: "Machine COCKTELITO - Précommande",
     price: 499.00,
     image: machineImage,
     description: "Réservez votre unité. Expédition en juin 2026.",

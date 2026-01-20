@@ -6,7 +6,7 @@ export function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div className="md:col-span-1">
-            <h2 className="text-2xl font-display font-bold text-primary mb-6">COCKELITO</h2>
+            <h2 className="text-2xl font-display font-bold text-primary mb-6">COCKTELITO</h2>
             <p className="text-zinc-500 text-sm leading-relaxed">
               Sublimer l'expérience des boissons à domicile grâce au design et à la technologie.
             </p>

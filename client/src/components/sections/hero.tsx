@@ -37,7 +37,7 @@ export function Hero() {
           transition={{ duration: 1, delay: 0.4 }}
           className="font-display font-bold text-5xl md:text-8xl lg:text-9xl tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-white via-white to-white/50 mb-8"
         >
-          COCKELITO
+          COCKTELITO
         </motion.h1>
 
         <motion.p

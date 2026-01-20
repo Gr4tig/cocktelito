@@ -25,7 +25,7 @@ export function ProductShowcase() {
         >
           <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">L'Ingénierie de la Perfection</h2>
           <p className="text-white/60 max-w-2xl mx-auto">
-            Chaque courbe est intentionnelle. Chaque matériau est premium. COCKELITO n'est pas seulement une machine ; c'est une pièce maîtresse.
+            Chaque courbe est intentionnelle. Chaque matériau est premium. COCKTELITO n'est pas seulement une machine ; c'est une pièce maîtresse.
           </p>
         </motion.div>
 
