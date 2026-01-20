@@ -5,17 +5,17 @@ const features = [
   {
     icon: Cpu,
     title: "Système de capsules intelligent",
-    description: "Notre puce pilotée par IA reconnaît chaque capsule instantanément, ajustant la pression et la température pour une infusion parfaite."
+    description: "Insérez seulement votre capsule : la puce IA ajuste température et pression sans aucun réglage."
   },
   {
     icon: LayoutTemplate,
     title: "Écran tactile HD",
-    description: "Une interface en verre transparente qui disparaît lorsqu'elle n'est pas utilisée, s'éveillant d'une lueur subtile à votre approche."
+    description: "Une interface en verre transparente qui vous permet de choisir facilement vos boissons préférées."
   },
   {
     icon: Droplets,
     title: "Mélange de précision",
-    description: "La technologie de micro-aération garantit que vos cocktails ont la texture parfaite et que votre matcha est fouetté à point."
+    description: "Qu'il s'agisse de l'onctuosité d'un matcha ou de la texture d'un cocktail frappé, notre système de micro-aération garantit l'excellence."
   },
   {
     icon: Sparkles,
