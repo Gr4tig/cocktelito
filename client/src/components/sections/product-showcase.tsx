@@ -12,8 +12,8 @@ export function ProductShowcase() {
   ];
 
   return (
-    <section id="machine" className="py-24 md:py-32 bg-[#121217] text-white relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black to-transparent opacity-50 pointer-events-none" />
+    <section id="machine" className="py-24 md:py-32 bg-muted/30 text-foreground relative overflow-hidden">
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-background/50 to-transparent opacity-50 pointer-events-none" />
       
       <div className="container mx-auto px-4 relative z-10">
         <motion.div 
@@ -23,8 +23,8 @@ export function ProductShowcase() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">L'Ingénierie de la Perfection</h2>
-          <p className="text-white/60 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-5xl font-display font-bold mb-4 text-foreground">L'Ingénierie de la Perfection</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
             Chaque courbe est intentionnelle. Chaque matériau est premium. COCKTELITO n'est pas seulement une machine ; c'est une pièce maîtresse.
           </p>
         </motion.div>
@@ -57,14 +57,14 @@ export function ProductShowcase() {
                     <TooltipTrigger asChild>
                       <button className="relative group">
                         <span className="absolute inline-flex h-full w-full rounded-full bg-primary opacity-20 animate-ping" />
-                        <div className="relative h-8 w-8 bg-black/50 backdrop-blur-md border border-primary/50 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+                        <div className="relative h-8 w-8 bg-background/80 backdrop-blur-md border border-primary/50 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-colors">
                           <Plus className="h-4 w-4" />
                         </div>
                       </button>
                     </TooltipTrigger>
-                    <TooltipContent side="right" className="bg-black/90 border-white/10 text-white p-4 max-w-xs">
+                    <TooltipContent side="right" className="bg-popover border-border text-popover-foreground p-4 max-w-xs">
                       <p className="font-bold text-primary mb-1">{point.label}</p>
-                      <p className="text-xs text-white/70">{point.desc}</p>
+                      <p className="text-xs text-muted-foreground">{point.desc}</p>
                     </TooltipContent>
                   </Tooltip>
                 </div>

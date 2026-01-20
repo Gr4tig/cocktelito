@@ -87,8 +87,8 @@
   --popover: 0 0% 100%;
   --popover-foreground: 225 15% 12%;
  
-  --primary: 18 55% 65%;
-  --primary-foreground: 225 15% 10%;
+  --primary: 18 55% 55%;
+  --primary-foreground: 0 0% 100%;
  
   --secondary: 220 14.3% 95.9%;
   --secondary-foreground: 220.9 39.3% 11%;
@@ -96,15 +96,15 @@
   --muted: 220 14.3% 95.9%;
   --muted-foreground: 220 8.9% 46.1%;
  
-  --accent: 18 55% 65%;
-  --accent-foreground: 225 15% 10%;
+  --accent: 220 14.3% 95.9%;
+  --accent-foreground: 225 15% 12%;
  
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 210 40% 98%;
  
   --border: 220 13% 91%;
   --input: 220 13% 91%;
-  --ring: 18 55% 65%;
+  --ring: 18 55% 55%;
 }
 
 @layer utilities {
@@ -122,6 +122,13 @@
     background: rgba(10, 10, 15, 0.6);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  @media (prefers-color-scheme: light) {
+    .glass-dark {
+      background: rgba(255, 255, 255, 0.8);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
   }
 
   .text-glow {

@@ -1,50 +1,14 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { useCart } from "@/lib/cart-context";
-import capsulesImage from "@assets/generated_images/set_of_premium_drink_capsules.png";
-import machineImage from "@assets/generated_images/sleek_rose_gold_and_anthracite_drink_machine.png";
-import tiroirImage from "@assets/generated_images/Tiroir.png";
-import capsuleCosmopolitainImage from "@assets/generated_images/capsule_cosmopolitain.png"
-import capsuleEspressoImage from "@assets/generated_images/capsule_espresso.png"
-
-const products = [
-  {
-    id: "machine-preorder",
-    name: "Machine COCKTELITO - Précommande",
-    price: 499.0,
-    image: machineImage,
-    description: "Réservez votre unité. Expédition en juin 2026.",
-    badge: "Limité",
-  },
-  {
-    id: "pack-cocktail",
-    name: "Pack Espresso",
-    price: 29.0,
-    image: capsuleEspressoImage,
-    description: "12 Capsules : Espresso Martini",
-    badge: "Bestseller",
-  },
-  {
-    id: "pack-wellness",
-    name: "Pack Cosmopolitain",
-    price: 35.0,
-    image: capsuleCosmopolitainImage,
-    description: "12 Capsules : Cosmopolitain",
-  },
-  {
-    id: "pack-all-capsule",
-    name: "Collection de toutes nos capsules",
-    price: 97.99,
-    image: tiroirImage,
-    description: "124 Capsules : Sencha, Jasmin, Earl Grey...",
-  },
-];
+import { products } from "@/lib/products";
+import { Link } from "wouter";
 
 export function Shop() {
   const { addItem } = useCart();
 
   return (
-    <section id="shop" className="py-32 bg-zinc-50">
+    <section id="shop" className="py-32 bg-muted/30">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -55,7 +19,7 @@ export function Shop() {
           <span className="text-primary text-sm font-bold tracking-widest uppercase">
             La Collection
           </span>
-          <h2 className="text-4xl md:text-5xl font-display font-bold mt-2 text-zinc-900">
+          <h2 className="text-4xl md:text-5xl font-display font-bold mt-2 text-foreground">
             Une Sélection de Goût
           </h2>
         </motion.div>
@@ -68,39 +32,57 @@ export function Shop() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col"
+              className="bg-card rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col border border-border"
             >
-              <div className="relative aspect-square overflow-hidden bg-black p-8 ">
-                {product.badge && (
-                  <span className="absolute top-4 left-4 bg-black text-white text-[10px] font-bold px-2 py-1 uppercase tracking-wider z-10">
-                    {product.badge}
-                  </span>
-                )}
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
+              <Link href={`/product/${product.id}`}>
+                <div className="relative aspect-square overflow-hidden bg-muted p-8 cursor-pointer">
+                  {product.badge && (
+                    <span className="absolute top-4 left-4 bg-foreground text-background text-[10px] font-bold px-2 py-1 uppercase tracking-wider z-10 rounded">
+                      {product.badge}
+                    </span>
+                  )}
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+              </Link>
               <div className="p-6 flex flex-col flex-1">
-                <h3 className="text-lg font-bold text-zinc-900 font-display leading-tight mb-2">
-                  {product.name}
-                </h3>
-                <p className="text-sm text-zinc-500 mb-4 flex-1">
+                <Link href={`/product/${product.id}`}>
+                  <h3 className="text-lg font-bold text-foreground font-display leading-tight mb-2 hover:text-primary transition-colors cursor-pointer">
+                    {product.name}
+                  </h3>
+                </Link>
+                <p className="text-sm text-muted-foreground mb-4 flex-1">
                   {product.description}
                 </p>
-                <div className="flex items-center justify-between mt-auto">
-                  <span className="text-lg font-medium text-zinc-900">
+                <div className="flex items-center justify-between mt-auto gap-4">
+                  <span className="text-lg font-medium text-foreground">
                     {product.price}€
                   </span>
-                  <Button
-                    size="sm"
-                    className="bg-zinc-900 hover:bg-zinc-800 text-white rounded-full px-6"
-                    onClick={() => addItem(product)}
-                    data-testid={`add-to-cart-${product.id}`}
-                  >
-                    Ajouter
-                  </Button>
+                  <div className="flex gap-2">
+                    <Link href={`/product/${product.id}`}>
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        className="rounded-full px-4"
+                      >
+                        Voir
+                      </Button>
+                    </Link>
+                    <Button
+                      size="sm"
+                      className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-6"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        addItem(product);
+                      }}
+                      data-testid={`add-to-cart-${product.id}`}
+                    >
+                      Ajouter
+                    </Button>
+                  </div>
                 </div>
               </div>
             </motion.div>
