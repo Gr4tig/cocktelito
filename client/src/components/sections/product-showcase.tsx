@@ -5,10 +5,10 @@ import { Plus } from "lucide-react";
 
 export function ProductShowcase() {
   const points = [
-    { x: "20%", y: "30%", label: "Smart Capsule System", desc: "RFID recognition for perfect brewing parameters" },
-    { x: "75%", y: "40%", label: "HD Touch Interface", desc: "Intuitive control over strength and temperature" },
-    { x: "50%", y: "85%", label: "Precision Spout", desc: "Aerated flow for optimal aroma release" },
-    { x: "30%", y: "60%", label: "Rose Gold Finish", desc: "Aviation-grade aluminum alloy" },
+    { x: "20%", y: "30%", label: "Système de capsules intelligent", desc: "Reconnaissance RFID pour des paramètres d'infusion parfaits" },
+    { x: "75%", y: "40%", label: "Interface tactile HD", desc: "Contrôle intuitif de l'intensité et de la température" },
+    { x: "50%", y: "85%", label: "Bec de précision", desc: "Flux aéré pour une libération optimale des arômes" },
+    { x: "30%", y: "60%", label: "Finition Or Rose", desc: "Alliage d'aluminium de qualité aéronautique" },
   ];
 
   return (
@@ -23,9 +23,9 @@ export function ProductShowcase() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">Engineered Perfection</h2>
+          <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">L'Ingénierie de la Perfection</h2>
           <p className="text-white/60 max-w-2xl mx-auto">
-            Every curve is intentional. Every material is premium. COCKELITO isn't just a machine; it's a centerpiece.
+            Chaque courbe est intentionnelle. Chaque matériau est premium. COCKELITO n'est pas seulement une machine ; c'est une pièce maîtresse.
           </p>
         </motion.div>
 

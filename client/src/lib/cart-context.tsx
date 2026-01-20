@@ -31,8 +31,8 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
       const existing = prev.find((item) => item.id === product.id);
       if (existing) {
         toast({
-          title: "Added to cart",
-          description: `${product.name} quantity updated.`,
+          title: "Ajouté au panier",
+          description: `Quantité de ${product.name} mise à jour.`,
         });
         return prev.map((item) =>
           item.id === product.id
@@ -41,8 +41,8 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
         );
       }
       toast({
-        title: "Added to cart",
-        description: `${product.name} added to your cart.`,
+        title: "Ajouté au panier",
+        description: `${product.name} ajouté à votre panier.`,
       });
       return [...prev, { ...product, quantity: 1 }];
     });

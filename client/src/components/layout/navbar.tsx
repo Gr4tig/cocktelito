@@ -18,9 +18,9 @@ export function Navbar() {
 
         <div className="flex items-center gap-4 sm:gap-8">
           <div className="hidden md:flex gap-6 text-sm font-medium text-white/80">
-            <a href="#features" className="hover:text-primary transition-colors">Experience</a>
+            <a href="#features" className="hover:text-primary transition-colors">Expérience</a>
             <a href="#machine" className="hover:text-primary transition-colors">Machine</a>
-            <a href="#shop" className="hover:text-primary transition-colors">Shop</a>
+            <a href="#shop" className="hover:text-primary transition-colors">Boutique</a>
           </div>
 
           <Sheet>
@@ -36,14 +36,14 @@ export function Navbar() {
             </SheetTrigger>
             <SheetContent className="w-full sm:max-w-md border-l border-white/10 bg-[#1a1a24] text-white">
               <SheetHeader>
-                <SheetTitle className="text-white font-display tracking-wider">Your Selection</SheetTitle>
+                <SheetTitle className="text-white font-display tracking-wider">Votre Sélection</SheetTitle>
               </SheetHeader>
               
               <div className="mt-8 flex-1 h-[calc(100vh-12rem)]">
                 {items.length === 0 ? (
                   <div className="h-full flex flex-col items-center justify-center text-white/40 space-y-4">
                     <ShoppingBag className="h-12 w-12 opacity-20" />
-                    <p>Your cart is empty</p>
+                    <p>Votre panier est vide</p>
                   </div>
                 ) : (
                   <ScrollArea className="h-full pr-4">
@@ -55,7 +55,7 @@ export function Navbar() {
                           </div>
                           <div className="flex-1 space-y-1">
                             <h4 className="font-medium text-white/90">{item.name}</h4>
-                            <p className="text-primary text-sm">${item.price}</p>
+                            <p className="text-primary text-sm">{item.price}€</p>
                             
                             <div className="flex items-center gap-2 mt-2">
                               <Button 
@@ -97,10 +97,10 @@ export function Navbar() {
                   <Separator className="bg-white/10" />
                   <div className="flex justify-between text-lg font-medium">
                     <span>Total</span>
-                    <span>${total.toFixed(2)}</span>
+                    <span>{total.toFixed(2)}€</span>
                   </div>
                   <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-medium py-6 text-lg">
-                    Checkout
+                    Commander
                   </Button>
                 </div>
               )}

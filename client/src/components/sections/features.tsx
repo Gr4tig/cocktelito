@@ -4,23 +4,23 @@ import { Cpu, Droplets, LayoutTemplate, Sparkles } from "lucide-react";
 const features = [
   {
     icon: Cpu,
-    title: "Intelligent Brew",
-    description: "Our AI-driven chip recognizes each capsule instantly, adjusting pressure and temperature for the perfect serve."
+    title: "Système de capsules intelligent",
+    description: "Notre puce pilotée par IA reconnaît chaque capsule instantanément, ajustant la pression et la température pour une infusion parfaite."
   },
   {
     icon: LayoutTemplate,
-    title: "HD Touch Control",
-    description: "A seamless glass interface that disappears when not in use, waking with a subtle glow at your approach."
+    title: "Écran tactile HD",
+    description: "Une interface en verre transparente qui disparaît lorsqu'elle n'est pas utilisée, s'éveillant d'une lueur subtile à votre approche."
   },
   {
     icon: Droplets,
-    title: "Precision Mixing",
-    description: "Micro-aeration technology ensures your cocktails have the perfect texture and your matcha is whisked to froth."
+    title: "Mélange de précision",
+    description: "La technologie de micro-aération garantit que vos cocktails ont la texture parfaite et que votre matcha est fouetté à point."
   },
   {
     icon: Sparkles,
-    title: "Premium Materials",
-    description: "Built from a solid block of anodized aluminum with rose gold accents. Durable, beautiful, timeless."
+    title: "Design Premium",
+    description: "Construit à partir d'un bloc massif d'aluminium anodisé avec des accents en or rose. Durable, beau, intemporel."
   }
 ];
 

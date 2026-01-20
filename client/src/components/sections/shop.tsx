@@ -7,33 +7,33 @@ import machineImage from "@assets/generated_images/sleek_rose_gold_and_anthracit
 const products = [
   {
     id: "machine-preorder",
-    name: "COCKELITO Machine - Pre-order",
+    name: "Machine COCKELITO - Précommande",
     price: 499.00,
     image: machineImage,
-    description: "Secure your unit. Shipping June 2026.",
-    badge: "Limited"
+    description: "Réservez votre unité. Expédition en juin 2026.",
+    badge: "Limité"
   },
   {
     id: "pack-cocktail",
-    name: "Signature Cocktails Pack",
+    name: "Pack Cocktails Signature",
     price: 29.00,
-    image: capsulesImage, // In a real app, I'd crop/swap this image
-    description: "12 Capsules: Negroni, Old Fashioned, Martini.",
+    image: capsulesImage,
+    description: "12 Capsules : Negroni, Old Fashioned, Martini.",
     badge: "Bestseller"
   },
   {
     id: "pack-tea",
-    name: "Zen Master Tea Collection",
+    name: "Collection de Thé Zen Master",
     price: 24.00,
     image: capsulesImage,
-    description: "12 Capsules: Sencha, Jasmine, Earl Grey.",
+    description: "12 Capsules : Sencha, Jasmin, Earl Grey.",
   },
   {
     id: "pack-wellness",
-    name: "Vitality Boosters",
+    name: "Boosters de Vitalité",
     price: 35.00,
     image: capsulesImage,
-    description: "12 Capsules: Vitamin C, Zinc, Magnesium blends.",
+    description: "12 Capsules : Mélanges Vitamine C, Zinc, Magnésium.",
   }
 ];
 
@@ -49,8 +49,8 @@ export function Shop() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="text-primary text-sm font-bold tracking-widest uppercase">The Collection</span>
-          <h2 className="text-4xl md:text-5xl font-display font-bold mt-2 text-zinc-900">Curated for Taste</h2>
+          <span className="text-primary text-sm font-bold tracking-widest uppercase">La Collection</span>
+          <h2 className="text-4xl md:text-5xl font-display font-bold mt-2 text-zinc-900">Une Sélection de Goût</h2>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -79,14 +79,14 @@ export function Shop() {
                 <h3 className="text-lg font-bold text-zinc-900 font-display leading-tight mb-2">{product.name}</h3>
                 <p className="text-sm text-zinc-500 mb-4 flex-1">{product.description}</p>
                 <div className="flex items-center justify-between mt-auto">
-                  <span className="text-lg font-medium text-zinc-900">${product.price}</span>
+                  <span className="text-lg font-medium text-zinc-900">{product.price}€</span>
                   <Button 
                     size="sm" 
                     className="bg-zinc-900 hover:bg-zinc-800 text-white rounded-full px-6"
                     onClick={() => addItem(product)}
                     data-testid={`add-to-cart-${product.id}`}
                   >
-                    Add
+                    Ajouter
                   </Button>
                 </div>
               </div>
