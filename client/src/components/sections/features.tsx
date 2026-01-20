@@ -26,7 +26,7 @@ const features = [
 
 export function Features() {
   return (
-    <section id="features" className="py-24 bg-white text-zinc-900">
+    <section id="features" className="py-24 bg-background text-foreground">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {features.map((feature, index) => (
@@ -38,11 +38,11 @@ export function Features() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="group"
             >
-              <div className="mb-6 inline-flex p-4 rounded-2xl bg-zinc-50 group-hover:bg-primary/10 transition-colors">
-                <feature.icon className="h-8 w-8 text-zinc-900 group-hover:text-primary transition-colors" strokeWidth={1.5} />
+              <div className="mb-6 inline-flex p-4 rounded-2xl bg-muted group-hover:bg-primary/10 transition-colors">
+                <feature.icon className="h-8 w-8 text-foreground group-hover:text-primary transition-colors" strokeWidth={1.5} />
               </div>
-              <h3 className="text-xl font-bold mb-3 font-display">{feature.title}</h3>
-              <p className="text-zinc-500 leading-relaxed text-sm">
+              <h3 className="text-xl font-bold mb-3 font-display text-foreground">{feature.title}</h3>
+              <p className="text-muted-foreground leading-relaxed text-sm">
                 {feature.description}
               </p>
             </motion.div>
