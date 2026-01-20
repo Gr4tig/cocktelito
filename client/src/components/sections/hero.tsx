@@ -1,24 +1,24 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
-import heroBg from "@assets/generated_images/cinematic_luxury_bar_atmosphere_background.png";
+import heroVideo from "@assets/Video_en_marche_de_la_machine_1768917066095.mp4";
 
 export function Hero() {
   return (
     <section className="relative h-screen w-full overflow-hidden bg-black text-white">
-      {/* Background with Ken Burns effect */}
-      <motion.div 
-        className="absolute inset-0 z-0"
-        initial={{ scale: 1.1 }}
-        animate={{ scale: 1.0 }}
-        transition={{ duration: 20, ease: "linear", repeat: Infinity, repeatType: "reverse" }}
-      >
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroBg})` }}
-        />
-        <div className="absolute inset-0 bg-black/60 z-10" /> {/* Dark overlay */}
-      </motion.div>
+      {/* Background Video */}
+      <div className="absolute inset-0 z-0">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="h-full w-full object-cover"
+        >
+          <source src={heroVideo} type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-black/50 z-10" /> {/* Dark overlay */}
+      </div>
 
       <div className="relative z-20 h-full container mx-auto flex flex-col items-center justify-center text-center px-4">
         <motion.div
